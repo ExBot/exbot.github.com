@@ -1,0 +1,620 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>WowWee Rovio API for ROS Groovy | ExBot</title>
+    <meta name="generator" content="nanoc 3.6.4">
+    <base href="http://exbot.github.io/" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+
+    <!-- JS -->
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/tabs.js"></script>
+
+    <!-- superfish -->
+    <link rel="stylesheet" media="screen" href="css/superfish.css" />
+    <script src="js/superfish-1.4.8/js/hoverIntent.js"></script>
+    <script src="js/superfish-1.4.8/js/superfish.js"></script>
+    <script src="js/superfish-1.4.8/js/supersubs.js"></script>
+    <!-- ENDS superfish -->
+
+    <!-- prettyPhoto -->
+    <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css" media="screen" />
+    <script src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <!-- ENDS prettyPhoto -->
+
+    <!-- poshytip -->
+    <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css" />
+    <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css" />
+    <script src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+    <!-- ENDS poshytip -->
+
+    <!-- Flex Slider -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!-- ENDS Flex Slider -->
+
+    <!-- Less framework -->
+    <link rel="stylesheet" media="all" href="css/lessframework.css" />
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- SKIN -->
+    <link rel="stylesheet" media="all" href="css/skin.css" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+    <link rel="stylesheet" media="all" href="css/code.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- reply move form -->
+    <script src="js/moveform.js"></script>
+</head>
+
+<body lang="zh">
+    <header class="clearfix">
+
+        <div style="display:none">
+        <!-- top widget -->
+        <div id="top-widget-holder">
+            <div class="wrapper">
+                <div id="top-widget">
+                    <div class="padding">
+                        <ul class="widget-cols clearfix">
+                            <li class="first-col">
+                                <div class="widget-block">
+                                    <h4>Recent posts</h4>
+                                    <div class="recent-post">
+                                        <a href="#" class="thumb">
+                                            <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                                        <div class="post-head">
+                                            <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <a href="#" class="thumb">
+                                            <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                                        <div class="post-head">
+                                            <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <a href="#" class="thumb">
+                                            <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                                        <div class="post-head">
+                                            <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="second-col">
+                                <div class="widget-block">
+                                    <h4>Dummy text</h4>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                                </div>
+                            </li>
+                            <li class="third-col">
+                                <div class="widget-block">
+                                    <h4>Dummy text</h4>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                                </div>
+                            </li>
+                            <li class="fourth-col">
+                                <div class="widget-block">
+                                    <h4>Dummy text</h4>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="top-open">Menu</a>
+        </div>
+        <!-- ENDS top-widget -->
+        </div>
+
+        <div class="wrapper">
+            <div id="logo" class="clearfix">
+                <a href="index.html" id="name"><h1>ExBot</h1></a>
+                <a href="http://blog.exbot.net"><img src="img/logo.png" alt="ExBot's Blog"></a>
+            </div>
+
+            <nav>
+                <ul id="nav" class="sf-menu">
+                    <li ><a href="index.html">HOME</a></li>
+                    <li ><a href="news.html">NEWS</a></li>
+                    <li class="current-menu-item"><a href="http://blog.exbot.net">BLOG</a></li>
+                    <li ><a href="works.html">WORKS</a></li>
+                    <li ><a href="about.html">ABOUT</a></li>
+                    <!--<li ><a href="page.html">ABOUT</a>
+                        <ul>
+                            <li><a href="#">Submenu</a></li>
+                            <li><a href="#">Submenu</a></li>
+                            <li><a href="#">Submenu</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="portfolio.html">WORK</a></li>
+                    <li ><a href="contact.html">CONTACT</a></li>
+                -->
+                </ul>
+                <div id="combo-holder"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <div id="main">
+        <div class="wrapper clearfix">
+            
+<!-- posts list -->
+<div id="posts-list">
+    
+    <h2 class="page-heading"><span>Article</span></h2>
+<article class="format-standard">
+    <h2 class="post-heading"><a href="blog/2013/06/rovio_base_for_ros_groovy.html">WowWee Rovio API for ROS Groovy</a></h2>
+    <div class="post-content markdown">
+        <p>玩WowWee Rovio小车有段时间了，整理了一下之前写的代码，在ROS Groovy里面，对WowWee Rovio的CGI接口进行了封装，这次封装的主要是控制接口（三个全向轮，摄像头），图像接口（为了节约流量没有采取视频流的方式获取图像，而是采用request来response实时图像），MCU Report接口（包含红外传感，编码盘信息，电池信息等）。</p>
+
+<p>Environment: Ubuntu 12.10 + Ros groovy (catkin workspace)</p>
+
+<!-- more -->
+
+<h2 id="section">科普</h2>
+
+<p>WowWee Rovio是WowWee的早些年的一款WIFI小车，对于机器人爱好者来说，它的强大在于不错的硬件配置：</p>
+
+<ol>
+  <li>三个全向轮，附带三个编码传感器  </li>
+  <li>WIFI功能+摄像头  </li>
+  <li>双向语音  </li>
+  <li>一个红外障碍传感器  </li>
+</ol>
+
+<p>而对于普通玩家来说，它的亮点还在于北极星导航系统，内置的WEB控制页面易于访问控制，外观高端。只可惜国内流行的都是洋垃圾，电池老化，内置部件质量差，电路设计早已过时，不合理效率低，以至于大部分产品都是随时可能坏掉崩溃的产品，对普通玩家来说没有实用价值。但是对于机器人爱好者，做一些改装也能变废为宝。 </p>
+
+<p>ROS (Robot Operating System)，无需多言，做机器人研究的不用ROS，永远都会比别人落后一步。</p>
+
+<h2 id="how-to-use-roviobase-package-to-develop-with-rovio-api">How to use rovio_base package to develop with Rovio API</h2>
+
+<h3 id="download-roviobase-package-into-your-catkin-workspace-here-is-rosws">1. Download rovio_base package into your catkin workspace (here is ros_ws)</h3>
+
+<blockquote>
+  <p>$ cd ~/ros_ws/src<br />
+$ git clone https://github.com/yuanboshe/rovio_base.git</p>
+</blockquote>
+
+<h3 id="edit-rovioserverlaunch">2. Edit rovioServer.launch</h3>
+
+<blockquote>
+  <p>$ roscd rovio_base<br />
+$ gedit launch/rovioServer.launch</p>
+</blockquote>
+
+<p>Change the parameter values to yours</p>
+
+<pre><code>&lt;param name="/rovio_base/host" type="string" value="192.168.10.18" /&gt;
+&lt;param name="/rovio_base/port" type="string" value="80" /&gt;
+&lt;param name="/rovio_base/user" type="string" value="admin" /&gt;
+&lt;param name="/rovio_base/pw" type="string" value="admin" /&gt;
+</code></pre>
+
+<h3 id="create-roviotest-package">3. Create rovio_test package</h3>
+
+<blockquote>
+  <p>$ cd ~/ros_ws/src<br />
+$ catkin_create_pkg rovio_test std_msgs roscpp cv_bridge</p>
+</blockquote>
+
+<h3 id="create-roviotestcpp">4. Create rovioTest.cpp</h3>
+
+<blockquote>
+  <p>$ roscd rovio_test<br />
+$ gedit src/rovioTest.cpp  </p>
+</blockquote>
+
+<p>Paste the following code in to rovioTest.cpp and save.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers">  <a href="#n1" name="n1">1</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&quot;ros/ros.h&quot;</span>
+<span class="line-numbers">  <a href="#n2" name="n2">2</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&quot;rovio_base/manDrv.h&quot;</span>
+<span class="line-numbers">  <a href="#n3" name="n3">3</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&quot;rovio_base/image.h&quot;</span>
+<span class="line-numbers">  <a href="#n4" name="n4">4</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&quot;rovio_base/report.h&quot;</span>
+<span class="line-numbers">  <a href="#n5" name="n5">5</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;cv_bridge/cv_bridge.h&gt;</span>
+<span class="line-numbers">  <a href="#n6" name="n6">6</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;sensor_msgs/image_encodings.h&gt;</span>
+<span class="line-numbers">  <a href="#n7" name="n7">7</a></span><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;opencv2/opencv.hpp&gt;</span>
+<span class="line-numbers">  <a href="#n8" name="n8">8</a></span>
+<span class="line-numbers">  <a href="#n9" name="n9">9</a></span><span style="color:#0a5;font-weight:bold">int</span> main(<span style="color:#0a5;font-weight:bold">int</span> argc, <span style="color:#0a5;font-weight:bold">char</span> **argv)
+<span class="line-numbers"> <strong><a href="#n10" name="n10">10</a></strong></span>{
+<span class="line-numbers"> <a href="#n11" name="n11">11</a></span>  ros::init(argc, argv, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">rovioTest</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n12" name="n12">12</a></span>  ros::NodeHandle n;
+<span class="line-numbers"> <a href="#n13" name="n13">13</a></span>  ros::ServiceClient imageClient = n.serviceClient&lt;rovio_base::image&gt;(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">rovioImage</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n14" name="n14">14</a></span>  ros::ServiceClient controlClient = n.serviceClient&lt;rovio_base::manDrv&gt;(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">rovioControl</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n15" name="n15">15</a></span>  ros::ServiceClient reportClient = n.serviceClient&lt;rovio_base::report&gt;(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">rovioReport</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n16" name="n16">16</a></span>  rovio_base::image imageSrv;
+<span class="line-numbers"> <a href="#n17" name="n17">17</a></span>  rovio_base::manDrv controlSrv;
+<span class="line-numbers"> <a href="#n18" name="n18">18</a></span>  rovio_base::report reportSrv;
+<span class="line-numbers"> <a href="#n19" name="n19">19</a></span>
+<span class="line-numbers"> <strong><a href="#n20" name="n20">20</a></strong></span>  <span style="color:#777">// Head middle control</span>
+<span class="line-numbers"> <a href="#n21" name="n21">21</a></span>  controlSrv.request.drive = <span style="color:#00D">13</span>;
+<span class="line-numbers"> <a href="#n22" name="n22">22</a></span>  controlSrv.request.speed = <span style="color:#00D">9</span>;
+<span class="line-numbers"> <a href="#n23" name="n23">23</a></span>  <span style="color:#080;font-weight:bold">if</span> (controlClient.call(controlSrv))
+<span class="line-numbers"> <a href="#n24" name="n24">24</a></span>  {
+<span class="line-numbers"> <a href="#n25" name="n25">25</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Control response code: %d</span><span style="color:#710">&quot;</span></span>, (<span style="color:#0a5;font-weight:bold">int</span> )controlSrv.response.code);
+<span class="line-numbers"> <a href="#n26" name="n26">26</a></span>  }
+<span class="line-numbers"> <a href="#n27" name="n27">27</a></span>  <span style="color:#080;font-weight:bold">else</span>
+<span class="line-numbers"> <a href="#n28" name="n28">28</a></span>  {
+<span class="line-numbers"> <a href="#n29" name="n29">29</a></span>    ROS_ERROR(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Failed to call service rovioControl</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <strong><a href="#n30" name="n30">30</a></strong></span>    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+<span class="line-numbers"> <a href="#n31" name="n31">31</a></span>  }
+<span class="line-numbers"> <a href="#n32" name="n32">32</a></span>
+<span class="line-numbers"> <a href="#n33" name="n33">33</a></span>  <span style="color:#777">// Get report info</span>
+<span class="line-numbers"> <a href="#n34" name="n34">34</a></span>  <span style="color:#080;font-weight:bold">if</span> (reportClient.call(reportSrv))
+<span class="line-numbers"> <a href="#n35" name="n35">35</a></span>  {
+<span class="line-numbers"> <a href="#n36" name="n36">36</a></span>    <span style="color:#0a5;font-weight:bold">int</span> length = reportSrv.response.length;
+<span class="line-numbers"> <a href="#n37" name="n37">37</a></span>    <span style="color:#0a5;font-weight:bold">int</span> lDirection = reportSrv.response.lDirection;
+<span class="line-numbers"> <a href="#n38" name="n38">38</a></span>    <span style="color:#0a5;font-weight:bold">int</span> lNum = reportSrv.response.lNum;
+<span class="line-numbers"> <a href="#n39" name="n39">39</a></span>    <span style="color:#0a5;font-weight:bold">int</span> rDirection = reportSrv.response.rDirection;
+<span class="line-numbers"> <strong><a href="#n40" name="n40">40</a></strong></span>    <span style="color:#0a5;font-weight:bold">int</span> rNum = reportSrv.response.rNum;
+<span class="line-numbers"> <a href="#n41" name="n41">41</a></span>    <span style="color:#0a5;font-weight:bold">int</span> rearDirection = reportSrv.response.rearDirection;
+<span class="line-numbers"> <a href="#n42" name="n42">42</a></span>    <span style="color:#0a5;font-weight:bold">int</span> rearNum = reportSrv.response.rearNum;
+<span class="line-numbers"> <a href="#n43" name="n43">43</a></span>    <span style="color:#0a5;font-weight:bold">int</span> headPosition = reportSrv.response.headPosition;
+<span class="line-numbers"> <a href="#n44" name="n44">44</a></span>    <span style="color:#0a5;font-weight:bold">bool</span> isLedOn = reportSrv.response.isLedOn;
+<span class="line-numbers"> <a href="#n45" name="n45">45</a></span>    <span style="color:#0a5;font-weight:bold">bool</span> isIrOn = reportSrv.response.isIrOn;
+<span class="line-numbers"> <a href="#n46" name="n46">46</a></span>    <span style="color:#0a5;font-weight:bold">bool</span> isDetectedBarrier = reportSrv.response.isDetectedBarrier;
+<span class="line-numbers"> <a href="#n47" name="n47">47</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">MCU Report:</span><span style="color:#b0b">\n</span><span style="color:#D20">length=%d</span><span style="color:#710">&quot;</span></span>, length);
+<span class="line-numbers"> <a href="#n48" name="n48">48</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Left direction:num=%d:%d</span><span style="color:#710">&quot;</span></span>, lDirection, lNum);
+<span class="line-numbers"> <a href="#n49" name="n49">49</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Right direction:num=%d:%d</span><span style="color:#710">&quot;</span></span>, rDirection, rNum);
+<span class="line-numbers"> <strong><a href="#n50" name="n50">50</a></strong></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Rear direction:num=%d:%d</span><span style="color:#710">&quot;</span></span>, rearDirection, rearNum);
+<span class="line-numbers"> <a href="#n51" name="n51">51</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">headPosition=%d</span><span style="color:#710">&quot;</span></span>, headPosition);
+<span class="line-numbers"> <a href="#n52" name="n52">52</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">isLedOn=%d,isIrOn=%d,isDetectedBarrier=%d</span><span style="color:#710">&quot;</span></span>, isLedOn, isIrOn, isDetectedBarrier);
+<span class="line-numbers"> <a href="#n53" name="n53">53</a></span>  }
+<span class="line-numbers"> <a href="#n54" name="n54">54</a></span>  <span style="color:#080;font-weight:bold">else</span>
+<span class="line-numbers"> <a href="#n55" name="n55">55</a></span>  {
+<span class="line-numbers"> <a href="#n56" name="n56">56</a></span>    ROS_ERROR(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Failed to call service rovioReport</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n57" name="n57">57</a></span>    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+<span class="line-numbers"> <a href="#n58" name="n58">58</a></span>  }
+<span class="line-numbers"> <a href="#n59" name="n59">59</a></span>
+<span class="line-numbers"> <strong><a href="#n60" name="n60">60</a></strong></span>  <span style="color:#777">// Show images from camera</span>
+<span class="line-numbers"> <a href="#n61" name="n61">61</a></span>  <span style="color:#080;font-weight:bold">for</span> (<span style="color:#0a5;font-weight:bold">int</span> i = <span style="color:#00D">0</span>; i &lt; <span style="color:#00D">20</span>; i++)
+<span class="line-numbers"> <a href="#n62" name="n62">62</a></span>  {
+<span class="line-numbers"> <a href="#n63" name="n63">63</a></span>    <span style="color:#080;font-weight:bold">if</span> (imageClient.call(imageSrv))
+<span class="line-numbers"> <a href="#n64" name="n64">64</a></span>    {
+<span class="line-numbers"> <a href="#n65" name="n65">65</a></span>      ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Image size: %dx%d</span><span style="color:#710">&quot;</span></span>, (<span style="color:#0a5;font-weight:bold">int</span> )imageSrv.response.img.width, (<span style="color:#0a5;font-weight:bold">int</span> )imageSrv.response.img.height);
+<span class="line-numbers"> <a href="#n66" name="n66">66</a></span>      cv_bridge::CvImagePtr cvImgPtr;
+<span class="line-numbers"> <a href="#n67" name="n67">67</a></span>      <span style="color:#080;font-weight:bold">try</span>
+<span class="line-numbers"> <a href="#n68" name="n68">68</a></span>      {
+<span class="line-numbers"> <a href="#n69" name="n69">69</a></span>        cvImgPtr = cv_bridge::toCvCopy(imageSrv.response.img, sensor_msgs::image_encodings::BGR8);
+<span class="line-numbers"> <strong><a href="#n70" name="n70">70</a></strong></span>        cv::imshow(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>, cvImgPtr-&gt;image);
+<span class="line-numbers"> <a href="#n71" name="n71">71</a></span>        cv::waitKey(<span style="color:#00D">100</span>);
+<span class="line-numbers"> <a href="#n72" name="n72">72</a></span>      }
+<span class="line-numbers"> <a href="#n73" name="n73">73</a></span>      <span style="color:#080;font-weight:bold">catch</span> (cv_bridge::Exception&amp; e)
+<span class="line-numbers"> <a href="#n74" name="n74">74</a></span>      {
+<span class="line-numbers"> <a href="#n75" name="n75">75</a></span>        ROS_ERROR(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">cv_bridge exception: %s</span><span style="color:#710">&quot;</span></span>, e.what());
+<span class="line-numbers"> <a href="#n76" name="n76">76</a></span>        <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+<span class="line-numbers"> <a href="#n77" name="n77">77</a></span>      }
+<span class="line-numbers"> <a href="#n78" name="n78">78</a></span>    }
+<span class="line-numbers"> <a href="#n79" name="n79">79</a></span>    <span style="color:#080;font-weight:bold">else</span>
+<span class="line-numbers"> <strong><a href="#n80" name="n80">80</a></strong></span>    {
+<span class="line-numbers"> <a href="#n81" name="n81">81</a></span>      ROS_ERROR(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Failed to call service rovioImage</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n82" name="n82">82</a></span>      <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+<span class="line-numbers"> <a href="#n83" name="n83">83</a></span>    }
+<span class="line-numbers"> <a href="#n84" name="n84">84</a></span>  }
+<span class="line-numbers"> <a href="#n85" name="n85">85</a></span>
+<span class="line-numbers"> <a href="#n86" name="n86">86</a></span>  <span style="color:#777">// Head down control</span>
+<span class="line-numbers"> <a href="#n87" name="n87">87</a></span>  controlSrv.request.drive = <span style="color:#00D">12</span>;
+<span class="line-numbers"> <a href="#n88" name="n88">88</a></span>  controlSrv.request.speed = <span style="color:#00D">9</span>;
+<span class="line-numbers"> <a href="#n89" name="n89">89</a></span>  <span style="color:#080;font-weight:bold">if</span> (controlClient.call(controlSrv))
+<span class="line-numbers"> <strong><a href="#n90" name="n90">90</a></strong></span>  {
+<span class="line-numbers"> <a href="#n91" name="n91">91</a></span>    ROS_INFO(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Control response code: %d</span><span style="color:#710">&quot;</span></span>, (<span style="color:#0a5;font-weight:bold">int</span> )controlSrv.response.code);
+<span class="line-numbers"> <a href="#n92" name="n92">92</a></span>  }
+<span class="line-numbers"> <a href="#n93" name="n93">93</a></span>  <span style="color:#080;font-weight:bold">else</span>
+<span class="line-numbers"> <a href="#n94" name="n94">94</a></span>  {
+<span class="line-numbers"> <a href="#n95" name="n95">95</a></span>    ROS_ERROR(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Failed to call service rovioControl</span><span style="color:#710">&quot;</span></span>);
+<span class="line-numbers"> <a href="#n96" name="n96">96</a></span>    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+<span class="line-numbers"> <a href="#n97" name="n97">97</a></span>  }
+<span class="line-numbers"> <a href="#n98" name="n98">98</a></span>
+<span class="line-numbers"> <a href="#n99" name="n99">99</a></span>  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+<span class="line-numbers"><strong><a href="#n100" name="n100">100</a></strong></span>}
+</pre></div>
+</div>
+</div>
+
+<p>About how to use the API, you can refer to Rovio API document. The above test program shows that three services you can use: “rovioControl”, “rovioImage” and “rovioReport”. You can find them as ManualDrive(), GetImage, GetMCUReport () in the above document.<br />
+Also, you may prefer to use the rovioParser class directly, that avoids using ROS’s service and client frame.</p>
+
+<h3 id="edit-the-roviotest-cmakeliststxt-located-at-rowwssrcroviotestcmakeliststxt-and-change-the-related-regions-as-followsor-just-add-at-the-end">5. Edit the rovio_test CMakeLists.txt located at ~/row_ws/src/rovio_test/CMakeLists.txt and change the related regions as follows(or just add at the end)</h3>
+
+<pre><code>add_executable(rovioTest src/rovioTest.cpp)  
+target_link_libraries(rovioTest ${catkin_LIBRARIES})
+</code></pre>
+
+<h3 id="build-the-packages">6. Build the packages</h3>
+
+<blockquote>
+  <p>$ cd ~/ros_ws/<br />
+$ catkin_make</p>
+</blockquote>
+
+<h3 id="run-them-to-test">7. Run them to test</h3>
+
+<p>Run the follow commands in three terminals respectively</p>
+
+<blockquote>
+  <p>$ roscore<br />
+$ roslaunch rovio_base rovioServer.launch<br />
+$ rosrun rovio_test rovioTest  </p>
+</blockquote>
+
+<p>After you executed the last command, your WowWee Rovio would head middle and head down, and you would view the images from camera 2 seconds.</p>
+
+<p>在测试程序rovioTest node的terminal中，Control response code为0，MCU Report length &gt; 0，Image size 显示正确值，则三个services调用返回了正确数据。</p>
+					
+    </div>
+    <div class="meta">
+    <div class="author"> Yuanbo She @ 2013 Jun, 10</div>
+    <div class="comments"> 0 comments </div>
+    <div class="tags"><a href="blog/tags/Rovio.html">Rovio</a>, <a href="blog/tags/Ros.html">Ros</a></div>
+</div>
+
+
+    <div style="display: none">
+        <!-- comments list -->
+        <div id="comments-wrap">
+            <h3 class="heading">5 COMMENTS</h3>
+            <ol class="commentlist">
+
+                <li class="comment even thread-even depth-1" id="li-comment-1">
+
+                    <div id="comment-1" class="comment-body clearfix">
+                        <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                        <div class="comment-author vcard">Jhon</div>
+                        <div class="comment-meta commentmetadata">
+                            <span class="comment-date">3 days ago  </span>
+                            <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=23#respond' onclick='return addComment.moveForm("comment-1", "1", "respond", "432")'>Reply</a></span>
+
+                        </div>
+                        <div class="comment-inner">
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                        </div>
+                    </div>
+
+                    <!-- child -->
+                    <ul class='children'>
+                        <li class="comment even alt depth-2" id="li-comment-2-1">
+                            <div id="comment-2" class="comment-body clearfix">
+                                <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                                <div class="comment-author vcard">Jhon</div>
+                                <div class="comment-meta commentmetadata">
+                                    <span class="comment-date">1 hour ago  </span>
+                                    <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=24#respond' onclick='return addComment.moveForm("comment-2", "2", "respond", "432")'>Reply</a></span>
+                                </div>
+                                <div class="comment-inner">
+                                    <p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="comment odd alt depth-2" id="li-comment-2-2">
+                            <div id="comment-3" class="comment-body clearfix">
+                                <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                                <div class="comment-author vcard">Jhon</div>
+                                <div class="comment-meta commentmetadata">
+                                    <span class="comment-date">1 hour ago  </span>
+                                    <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=24#respond' onclick='return addComment.moveForm("comment-3", "2", "respond", "432")'>Reply</a></span>
+                                </div>
+                                <div class="comment-inner">
+                                    <p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <!-- ENDS child -->
+                </li>
+
+
+                <li class="comment odd thread-even depth-1" id="li-comment-3">
+
+                    <div id="comment-4" class="comment-body clearfix">
+                        <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                        <div class="comment-author vcard">Jhon</div>
+                        <div class="comment-meta commentmetadata">
+                            <span class="comment-date">3 days ago  </span>
+                            <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=23#respond' onclick='return addComment.moveForm("comment-4", "1", "respond", "432")'>Reply</a></span>
+
+                        </div>
+                        <div class="comment-inner">
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="comment even thread-even depth-1" id="li-comment-4">
+
+                    <div id="comment-5" class="comment-body clearfix">
+                        <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                        <div class="comment-author vcard">Jhon</div>
+                        <div class="comment-meta commentmetadata">
+                            <span class="comment-date">3 days ago  </span>
+                            <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=23#respond' onclick='return addComment.moveForm("comment-5", "1", "respond", "432")'>Reply</a></span>
+
+                        </div>
+                        <div class="comment-inner">
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ol>
+        </div>
+        <!-- ENDS comments list -->
+
+        <!-- Respond -->
+        <div id="respond">
+            <div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">Cancel reply</a></div>
+            <form action="single.html" method="post" id="commentform">
+                <h3 class="heading">LEAVE A REPLY</h3>
+                <input type="text" name="author" id="author" value="" tabindex="1" />
+                <label for="author">Name <small>*</small></label><br />
+
+                <input type="text" name="email" id="email" value="" tabindex="2" />
+                <label for="email">Email <small>*</small> <span>(not published)</span></label><br />
+
+                <input type="text" name="url" id="url" value="" tabindex="3" />
+                <label for="url">Website</label>
+
+                <textarea name="comment" id="comment" tabindex="4"></textarea>
+
+                <p>
+                    <input name="submit" type="submit" id="submit" tabindex="5" value="Post" />
+                </p>
+
+                <input type='hidden' name='comment_post_ID' value='' id='comment_post_ID' />
+                <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+            </form>
+        </div>
+        <div class="clearfix"></div>
+        <!-- ENDS Respond -->
+    </div>
+</article>
+
+<!--
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript">
+var uyan_config = {
+     'su': "/blog/2013/06/rovio_base_for_ros_groovy/";
+};
+</script>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1804015" async=""></script>
+<!-- UY END -->
+-->
+
+
+</div>
+<!-- ENDS posts list -->
+
+<!-- sidebar -->
+<aside id="sidebar">
+    <ul>
+        <li class="block">
+            <h4>TAGS</h4>
+            <ul>
+                
+                <li class="cat-item"><a href="blog/tags/Rovio.html" title="Rovio">Rovio</a></li>
+                
+                <li class="cat-item"><a href="blog/tags/Ros.html" title="Ros">Ros</a></li>
+                
+            </ul>
+        </li>
+        <li class="block">
+            <h4>DATES</h4>
+            <ul>
+                
+                <li><a href="blog/2013.html" title="Blog posts from 2013">2013 (1)</a></li>
+                    
+                    <ul>
+                    
+                        <li class="cat-item"><a href="blog/2013/06.html" title="Blog posts from June 2013">06 (1)</a></li>
+                    
+                    </ul>
+                
+            </ul>
+        </li>
+    </ul>
+    <em id="corner"></em>
+</aside>
+<!-- ENDS sidebar -->
+
+        </div>
+    </div>
+    <!-- ENDS MAIN -->
+
+    <footer>
+        <div class="wrapper">
+
+            <div style="display:none">
+            <ul class="widget-cols clearfix">
+                <li class="first-col">
+                    <div class="widget-block">
+                        <h4>Recent posts</h4>
+                        <div class="recent-post">
+                            <a href="#" class="thumb">
+                                <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                            <div class="post-head">
+                                <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <a href="#" class="thumb">
+                                <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                            <div class="post-head">
+                                <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <a href="#" class="thumb">
+                                <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                            <div class="post-head">
+                                <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="second-col">
+
+                    <div class="widget-block">
+                        <h4>Zeni Template</h4>
+                        <p>Hope you find this template useful you are free to use it on personal and commercial projects. See the full license at this <a href="http://luiszuno.com/blog/license">link</a></p>
+                    </div>
+
+                </li>
+                <li class="third-col">
+
+                    <div class="widget-block">
+                        <div id="tweets" class="footer-col tweet">
+                            <h4>Twitter widget</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="fourth-col">
+                    <div class="widget-block">
+                        <h4>Placeholder images</h4>
+                        <p>Thanks to <a href="http://www.thebeaststudio.com/">Moe Pike</a> for sharing his work as place holder images for this preview. Visit his <a href="http://www.thebeaststudio.com/">website</a> and find more of his awesome work.</p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="left">Powered by Nanoc Luiszuno ...</div>
+                <div class="right" style="display:none">
+                    <ul id="social-bar">
+                        <li><a href="" title="Become a fan" class="poshytip">
+                            <img src="img/social/facebook.png" alt="Facebook" /></a></li>
+                        <li><a href="" title="Follow my tweets" class="poshytip">
+                            <img src="img/social/twitter.png" alt="twitter" /></a></li>
+                        <li><a href="" title="Add to the circle" class="poshytip">
+                            <img src="img/social/plus.png" alt="Google plus" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

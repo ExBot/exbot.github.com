@@ -1,0 +1,592 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>Aquarium Scheme | ExBot</title>
+    <meta name="generator" content="nanoc 3.6.4">
+    <base href="http://exbot.github.io/" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+
+    <!-- JS -->
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/tabs.js"></script>
+
+    <!-- superfish -->
+    <link rel="stylesheet" media="screen" href="css/superfish.css" />
+    <script src="js/superfish-1.4.8/js/hoverIntent.js"></script>
+    <script src="js/superfish-1.4.8/js/superfish.js"></script>
+    <script src="js/superfish-1.4.8/js/supersubs.js"></script>
+    <!-- ENDS superfish -->
+
+    <!-- prettyPhoto -->
+    <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css" media="screen" />
+    <script src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+    <!-- ENDS prettyPhoto -->
+
+    <!-- poshytip -->
+    <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css" />
+    <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css" />
+    <script src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+    <!-- ENDS poshytip -->
+
+    <!-- Flex Slider -->
+    <link rel="stylesheet" href="css/flexslider.css">
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!-- ENDS Flex Slider -->
+
+    <!-- Less framework -->
+    <link rel="stylesheet" media="all" href="css/lessframework.css" />
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- SKIN -->
+    <link rel="stylesheet" media="all" href="css/skin.css" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+    <link rel="stylesheet" media="all" href="css/code.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- reply move form -->
+    <script src="js/moveform.js"></script>
+</head>
+
+<body lang="zh">
+    <header class="clearfix">
+
+        <div style="display:none">
+        <!-- top widget -->
+        <div id="top-widget-holder">
+            <div class="wrapper">
+                <div id="top-widget">
+                    <div class="padding">
+                        <ul class="widget-cols clearfix">
+                            <li class="first-col">
+                                <div class="widget-block">
+                                    <h4>Recent posts</h4>
+                                    <div class="recent-post">
+                                        <a href="#" class="thumb">
+                                            <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                                        <div class="post-head">
+                                            <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <a href="#" class="thumb">
+                                            <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                                        <div class="post-head">
+                                            <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                                        </div>
+                                    </div>
+                                    <div class="recent-post">
+                                        <a href="#" class="thumb">
+                                            <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                                        <div class="post-head">
+                                            <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="second-col">
+                                <div class="widget-block">
+                                    <h4>Dummy text</h4>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                                </div>
+                            </li>
+                            <li class="third-col">
+                                <div class="widget-block">
+                                    <h4>Dummy text</h4>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                                </div>
+                            </li>
+                            <li class="fourth-col">
+                                <div class="widget-block">
+                                    <h4>Dummy text</h4>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies ege. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="top-open">Menu</a>
+        </div>
+        <!-- ENDS top-widget -->
+        </div>
+
+        <div class="wrapper">
+            <div id="logo" class="clearfix">
+                <a href="index.html" id="name"><h1>ExBot</h1></a>
+                <a href="http://blog.exbot.net"><img src="img/logo.png" alt="ExBot's Blog"></a>
+            </div>
+
+            <nav>
+                <ul id="nav" class="sf-menu">
+                    <li ><a href="index.html">HOME</a></li>
+                    <li ><a href="news.html">NEWS</a></li>
+                    <li class="current-menu-item"><a href="http://blog.exbot.net">BLOG</a></li>
+                    <li ><a href="works.html">WORKS</a></li>
+                    <li ><a href="about.html">ABOUT</a></li>
+                    <!--<li ><a href="page.html">ABOUT</a>
+                        <ul>
+                            <li><a href="#">Submenu</a></li>
+                            <li><a href="#">Submenu</a></li>
+                            <li><a href="#">Submenu</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="portfolio.html">WORK</a></li>
+                    <li ><a href="contact.html">CONTACT</a></li>
+                -->
+                </ul>
+                <div id="combo-holder"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <div id="main">
+        <div class="wrapper clearfix">
+            
+<!-- posts list -->
+<div id="posts-list">
+    
+    <h2 class="page-heading"><span>Article</span></h2>
+<article class="format-standard">
+    <h2 class="post-heading"><a href="blog/2013/06/aquarium_scheme.html">Aquarium Scheme</a></h2>
+    <div class="post-content markdown">
+        <blockquote>
+
+</blockquote>
+
+<!-- more -->
+
+<h2 id="section">方案一、机器虫展区</h2>
+
+<h3 id="section-1">整体描述</h3>
+
+<ol>
+  <li>机器虫展区为仿自然环境的玻璃罩隔离区域  </li>
+  <li>5大类共70个小型昆虫造型机器人在展区内自由爬行</li>
+  <li>3大类共12台六足机器人与游客互动</li>
+</ol>
+
+<h3 id="section-2">小型昆虫造型机器人</h3>
+
+<p>70个小型昆虫机器人分为5类。</p>
+
+<ol>
+  <li>
+    <p>4个声控光感电子蟹：当有击掌声或其他的声响，它会停止前进，并开始绕足，悄悄改变行进的方向。爬行到光线很暗的环境中，会停止前进，直到听到击掌声或是光线变亮才会继续爬行。<br />
+<img src="img/2013/06/aquarium_scheme/sub1.jpg" alt="" /></p>
+  </li>
+  <li>
+    <p>21个声控触感电子昆虫：前面一对触须采用弹簧线制作，触须受力时产生信号，控制其后退转弯，因此，遇到障碍物它会自动躲避。内置声控传感器，当你发出声响比如拍手，它会改变方向跑掉。<br />
+<img src="img/2013/06/aquarium_scheme/sub2.jpg" alt="" /></p>
+  </li>
+  <li>
+    <p>15个红外感应电子毛毛虫：蠕动前进，头部红外头感应到障碍物能转向。 <br />
+<img src="img/2013/06/aquarium_scheme/sub3.jpg" alt="" /><br />
+<a href="http://v.youku.com/v_show/id_XMzI1NjE3Mzg0.html" title="红外感应电子毛毛虫">视频链接</a></p>
+  </li>
+  <li>
+    <p>12个触须感应电子蚂蚁：它能能透过触觉感应器感知障碍物，当触角碰到障碍物时就会自动倒退然后绕开，或者改变方向逃跑。<br />
+<img src="img/2013/06/aquarium_scheme/sub4.jpg" alt="" /></p>
+  </li>
+  <li>
+    <p>18个电子蟑螂：四处乱撞，撞到墙就转向。<br />
+<img src="img/2013/06/aquarium_scheme/sub5.jpg" alt="" /><br />
+<a href="http://v.youku.com/v_show/id_XNDg4MjI2MTg0.html" title="电子蟑螂">视频链接</a></p>
+  </li>
+</ol>
+
+<p>主材料估价：66<em>4 + 48</em>21 + 15<em>18 + 12</em>18 + 4.5*18 = <code>1839元</code></p>
+
+<h3 id="section-3">六足机器人</h3>
+
+<p>12台六足机器人分为3类。</p>
+
+<ol>
+  <li>
+    <p>4台表演型机器人：电脑控制其在展区内活动。<br />
+<img src="img/2013/06/aquarium_scheme/six1.jpg" alt="" /><br />
+<a href="http://v.youku.com/v_show/id_XNTIzNTkxNDY0.html" title="表演型机器人">视频链接</a></p>
+  </li>
+  <li>
+    <p>4台手柄遥控六足机器人（配置2自由度机械手）：游客可以控制六足机器人移动，做出特定动作，并控制机械手抓取其他机器人；管理员（游客）可以用它来抓取不动（电池耗光）了的小型昆虫机器人，并把抓取到的昆虫机器人丢入回收口（方便管理员给其换电池），增强娱乐性。<br />
+<img src="img/2013/06/aquarium_scheme/six2.jpg" alt="" /><br />
+<a href="http://item.taobao.com/item.htm?spm=2013.1.0.151.POLd7J&amp;id=7713995431" title="六足机器人">淘宝及视频链接</a></p>
+  </li>
+  <li>
+    <p>4台Kinect互动+语音互动六足机器人：当游客（对着Kinect）向它招手时，它能走过来；当游客向它做动作时，它能做出反应（伸爪，站立等）；当游客用语音喊话时，它能做出反应。<br />
+<img src="img/2013/06/aquarium_scheme/six3.jpg" alt="" />  </p>
+  </li>
+</ol>
+
+<p>组件：</p>
+
+<ol>
+  <li>主机体1。<code>560元</code>：全身结构+19个GS9018舵机，不带控制电路。舵机扭矩：1.8kg-cm@6V，1.6kg-cm@4.8V。</li>
+  <li>主机体2。<code>1520元</code> = 350 + 18*65：全身结构 + 18个TR213舵机，不带控制电路。舵机扭矩13kg·cm，性能优于MG995。</li>
+  <li>主机体3。<code>1014元</code> = 330 + 18*38：全身结构 + 18个 MG995 舵机，不带控制电路。舵机扭矩13kg·cm。</li>
+  <li>
+    <p>机械臂。<code>239元</code>：结构件 + 2个TR205舵机。舵机扭矩：6.5kg·cm。<br />
+<img src="img/2013/06/aquarium_scheme/hand1.jpg" alt="" /></p>
+  </li>
+  <li>
+    <p>无线手柄套件。<code>270元</code>。<br />
+<img src="img/2013/06/aquarium_scheme/control1.jpg" alt="" /></p>
+  </li>
+  <li>32路舵机控制板。<code>168元</code>。</li>
+  <li>7.4V 5200MAH 30C 聚合物2s锂电池。<code>120元</code>。</li>
+  <li>平衡充电器。<code>160元</code>。</li>
+  <li>Kinect。<code>760元</code>。</li>
+  <li>WIFI模块/蓝牙模块。待定</li>
+  <li>Arduino主控板，上位机。待定</li>
+</ol>
+
+<p>主材料估价：560<em>4 + 1520</em>4 + 1014<em>4 + 239</em>4 + 270<em>4 + 168</em>12 + 120<em>16 + 160</em>4 + 760<em>4 + 500</em>12 = <code>28028元</code></p>
+
+<h3 id="section-4">备注</h3>
+
+<p>主材料机器人部分估价为：1839 + 28028 = <code>29867元</code></p>
+
+<p>除此以外，还需要部分加工设备，展台制作，电脑等。</p>
+
+<h2 id="air-swimmers">方案二、空中飞鱼 Air Swimmers</h2>
+
+<h3 id="section-5">整体描述</h3>
+
+<p><img src="img/2013/06/aquarium_scheme/fish1.jpg" alt="" />  </p>
+
+<p><a href="http://www.tudou.com/programs/view/TIX0xNR8GtY/?FR=LIAN" title="空中飞鱼 Air Swimmers">视频链接</a><br />
+放6条空中飞鱼（只有两种外观），让其在空中游来游去。<br />
+空中飞鱼 Air Swimmers 为大型氦气球，红外线控制，可以遥控爬升下降及尾翼。我们可以将其改装为自动避障的空中飞鱼，让起具备自动和手动两种模式。</p>
+
+<h3 id="section-6">材料</h3>
+
+<ol>
+  <li>飞鱼主体。<code>255元</code>。<a href="http://item.taobao.com/item.htm?spm=a230r.1.14.120.ZeULit&amp;id=13309277193&amp;_u=r10nmj01580">淘宝链接</a></li>
+  <li>10升氦气+钢瓶+充气球工具。<code>795元</code>。<a href="http://item.taobao.com/item.htm?spm=a230r.1.14.111.0cG25E&amp;id=16850119861&amp;_u=r10nmj0971b">淘宝链接</a></li>
+  <li>超声波避障模块。<code>28元</code>。<a href="http://item.taobao.com/item.htm?spm=a230r.1.14.3.Qb3RIn&amp;id=18501015359&amp;_u=r10nmj06036">淘宝链接</a></li>
+  <li>无线手柄套件。<code>270元</code>。</li>
+  <li>5V 3Ah锂聚合物电池。<code>46元</code>。<a href="http://item.taobao.com/item.htm?spm=a230r.1.14.53.de075j&amp;id=17017316026&amp;_u=s10nmj0c30e">淘宝链接</a></li>
+  <li>Arduino控制板。待定。</li>
+</ol>
+
+<p>主材料估价： 255<em>6 + 795 + 28</em>36 + 270<em>6 + 46</em>6 + 300*6 = <code>7029元</code></p>
+
+<h2 id="section-7">方案三、机器鱼水族馆</h2>
+
+<h3 id="section-8">整体描述</h3>
+
+<ol>
+  <li>机器鱼水族馆为玻璃水箱  </li>
+  <li>40条小机器鱼在水箱内自动游动</li>
+  <li>2条大机器鱼通过Kinect与游客互动</li>
+</ol>
+
+<h3 id="section-9">材料</h3>
+
+<ol>
+  <li>
+    <p>小机器鱼<br />
+<img src="img/2013/06/aquarium_scheme/fish2.jpg" alt="" /><br />
+<a href="http://v.youku.com/v_show/id_XNTQ3NDM0NDY4.html">视频链接</a> <br />
+<a href="http://item.taobao.com/item.htm?spm=a230r.1.14.4.ZeULit&amp;id=18196162741&amp;_u=r10nmj0d028">淘宝链接</a><br />
+Robo Fish机器小丑鱼，智能感应，放入水中，感到压力后自动会游动，遇到障碍物时也能智能拐弯，下潜上浮。<br />
+价格为<code>22元</code></p>
+  </li>
+  <li>
+    <p>机器鱼（市场无售）<br />
+<a href="http://ipd.pps.tv/play_32Y9BV.html">Kinect控制效果参考视频</a>  <br />
+5W/条（不确定是不是视频中的那种）</p>
+  </li>
+  <li>
+    <p>Kinect价格 <code>760元</code> http://item.taobao.com/item.htm?spm=a230r.1.14.3.WCb7Mj&amp;id=3381634996&amp;_u=r10nmj073b2</p>
+  </li>
+  <li>
+    <p>不确定接口</p>
+  </li>
+</ol>
+
+<p>主材料估价：22<em>40 + 50000</em>2 + 760*2 = <code>102400元</code></p>
+
+<h2 id="section-10">方案四、人型机器人</h2>
+
+<p>2台19自由度人型机器人，通过Kinect与游客交互，当游客做出某一动作时，机器人能模仿其动作。通过设定，也能使人型机器人自己做一些动作。<br />
+<img src="img/2013/06/aquarium_scheme/human1.jpg" alt="" />  </p>
+
+<p><a href="http://item.taobao.com/item.htm?spm=a1z10.3.w17-3937332404.26.ltsFSH&amp;id=12974197387&amp;_u=r10nmj0c613">淘宝链接</a><br />
+<a href="http://v.youku.com/v_show/id_XNTQwNjgzMjA4.html">视频链接</a><br />
+<code>2930元</code></p>
+
+<p>主材料估价：2930<em>2 + 760</em>2 + 160*2 = <code>7700元</code></p>
+					
+    </div>
+    <div class="meta">
+    <div class="author">  @ 2013 Jun, 27</div>
+    <div class="comments"> 0 comments </div>
+    <div class="tags"></div>
+</div>
+
+
+    <div style="display: none">
+        <!-- comments list -->
+        <div id="comments-wrap">
+            <h3 class="heading">5 COMMENTS</h3>
+            <ol class="commentlist">
+
+                <li class="comment even thread-even depth-1" id="li-comment-1">
+
+                    <div id="comment-1" class="comment-body clearfix">
+                        <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                        <div class="comment-author vcard">Jhon</div>
+                        <div class="comment-meta commentmetadata">
+                            <span class="comment-date">3 days ago  </span>
+                            <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=23#respond' onclick='return addComment.moveForm("comment-1", "1", "respond", "432")'>Reply</a></span>
+
+                        </div>
+                        <div class="comment-inner">
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                        </div>
+                    </div>
+
+                    <!-- child -->
+                    <ul class='children'>
+                        <li class="comment even alt depth-2" id="li-comment-2-1">
+                            <div id="comment-2" class="comment-body clearfix">
+                                <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                                <div class="comment-author vcard">Jhon</div>
+                                <div class="comment-meta commentmetadata">
+                                    <span class="comment-date">1 hour ago  </span>
+                                    <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=24#respond' onclick='return addComment.moveForm("comment-2", "2", "respond", "432")'>Reply</a></span>
+                                </div>
+                                <div class="comment-inner">
+                                    <p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="comment odd alt depth-2" id="li-comment-2-2">
+                            <div id="comment-3" class="comment-body clearfix">
+                                <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                                <div class="comment-author vcard">Jhon</div>
+                                <div class="comment-meta commentmetadata">
+                                    <span class="comment-date">1 hour ago  </span>
+                                    <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=24#respond' onclick='return addComment.moveForm("comment-3", "2", "respond", "432")'>Reply</a></span>
+                                </div>
+                                <div class="comment-inner">
+                                    <p>Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                    <!-- ENDS child -->
+                </li>
+
+
+                <li class="comment odd thread-even depth-1" id="li-comment-3">
+
+                    <div id="comment-4" class="comment-body clearfix">
+                        <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                        <div class="comment-author vcard">Jhon</div>
+                        <div class="comment-meta commentmetadata">
+                            <span class="comment-date">3 days ago  </span>
+                            <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=23#respond' onclick='return addComment.moveForm("comment-4", "1", "respond", "432")'>Reply</a></span>
+
+                        </div>
+                        <div class="comment-inner">
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="comment even thread-even depth-1" id="li-comment-4">
+
+                    <div id="comment-5" class="comment-body clearfix">
+                        <img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=35&amp;d=&amp;r=G' class='avatar avatar-35 photo' height='35' width='35' />
+                        <div class="comment-author vcard">Jhon</div>
+                        <div class="comment-meta commentmetadata">
+                            <span class="comment-date">3 days ago  </span>
+                            <span class="comment-reply-link-wrap"><a class='comment-reply-link' href='replytocom=23#respond' onclick='return addComment.moveForm("comment-5", "1", "respond", "432")'>Reply</a></span>
+
+                        </div>
+                        <div class="comment-inner">
+                            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ol>
+        </div>
+        <!-- ENDS comments list -->
+
+        <!-- Respond -->
+        <div id="respond">
+            <div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display: none;">Cancel reply</a></div>
+            <form action="single.html" method="post" id="commentform">
+                <h3 class="heading">LEAVE A REPLY</h3>
+                <input type="text" name="author" id="author" value="" tabindex="1" />
+                <label for="author">Name <small>*</small></label><br />
+
+                <input type="text" name="email" id="email" value="" tabindex="2" />
+                <label for="email">Email <small>*</small> <span>(not published)</span></label><br />
+
+                <input type="text" name="url" id="url" value="" tabindex="3" />
+                <label for="url">Website</label>
+
+                <textarea name="comment" id="comment" tabindex="4"></textarea>
+
+                <p>
+                    <input name="submit" type="submit" id="submit" tabindex="5" value="Post" />
+                </p>
+
+                <input type='hidden' name='comment_post_ID' value='' id='comment_post_ID' />
+                <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+            </form>
+        </div>
+        <div class="clearfix"></div>
+        <!-- ENDS Respond -->
+    </div>
+</article>
+
+<!--
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript">
+var uyan_config = {
+     'su': "/blog/2013/06/aquarium_scheme/";
+};
+</script>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1804015" async=""></script>
+<!-- UY END -->
+-->
+
+
+</div>
+<!-- ENDS posts list -->
+
+<!-- sidebar -->
+<aside id="sidebar">
+    <ul>
+        <li class="block">
+            <h4>TAGS</h4>
+            <ul>
+                
+                <li class="cat-item"><a href="blog/tags/Rovio.html" title="Rovio">Rovio</a></li>
+                
+                <li class="cat-item"><a href="blog/tags/Ros.html" title="Ros">Ros</a></li>
+                
+            </ul>
+        </li>
+        <li class="block">
+            <h4>DATES</h4>
+            <ul>
+                
+                <li><a href="blog/2013.html" title="Blog posts from 2013">2013 (1)</a></li>
+                    
+                    <ul>
+                    
+                        <li class="cat-item"><a href="blog/2013/06.html" title="Blog posts from June 2013">06 (1)</a></li>
+                    
+                    </ul>
+                
+            </ul>
+        </li>
+    </ul>
+    <em id="corner"></em>
+</aside>
+<!-- ENDS sidebar -->
+
+        </div>
+    </div>
+    <!-- ENDS MAIN -->
+
+    <footer>
+        <div class="wrapper">
+
+            <div style="display:none">
+            <ul class="widget-cols clearfix">
+                <li class="first-col">
+                    <div class="widget-block">
+                        <h4>Recent posts</h4>
+                        <div class="recent-post">
+                            <a href="#" class="thumb">
+                                <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                            <div class="post-head">
+                                <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <a href="#" class="thumb">
+                                <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                            <div class="post-head">
+                                <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <a href="#" class="thumb">
+                                <img src="img/dummies/54x54.gif" alt="Post" /></a>
+                            <div class="post-head">
+                                <a href="#">Pellentesque habitant morbi senectus</a><span> March 12, 2011</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="second-col">
+
+                    <div class="widget-block">
+                        <h4>Zeni Template</h4>
+                        <p>Hope you find this template useful you are free to use it on personal and commercial projects. See the full license at this <a href="http://luiszuno.com/blog/license">link</a></p>
+                    </div>
+
+                </li>
+                <li class="third-col">
+
+                    <div class="widget-block">
+                        <div id="tweets" class="footer-col tweet">
+                            <h4>Twitter widget</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="fourth-col">
+                    <div class="widget-block">
+                        <h4>Placeholder images</h4>
+                        <p>Thanks to <a href="http://www.thebeaststudio.com/">Moe Pike</a> for sharing his work as place holder images for this preview. Visit his <a href="http://www.thebeaststudio.com/">website</a> and find more of his awesome work.</p>
+                    </div>
+                </li>
+            </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="left">Powered by Nanoc Luiszuno ...</div>
+                <div class="right" style="display:none">
+                    <ul id="social-bar">
+                        <li><a href="" title="Become a fan" class="poshytip">
+                            <img src="img/social/facebook.png" alt="Facebook" /></a></li>
+                        <li><a href="" title="Follow my tweets" class="poshytip">
+                            <img src="img/social/twitter.png" alt="twitter" /></a></li>
+                        <li><a href="" title="Add to the circle" class="poshytip">
+                            <img src="img/social/plus.png" alt="Google plus" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
